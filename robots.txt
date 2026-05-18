@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://walkaboutadelaide.com/sitemap.xml
