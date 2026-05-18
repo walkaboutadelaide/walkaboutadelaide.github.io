@@ -250,6 +250,38 @@
       
       
       <li class="article-list-item">
+        <a href="../articles/how-accurate-is-our-trail-data/" class="ali-link">
+          <div class="ali-main">
+            <h2 class="ali-title">How Accurate Is Our Trail Data?</h2>
+            <p class="ali-desc">How Walk About Adelaide measures trail distance, elevation gain and time — GPS phone recordings plus public route data, and why figures vary slightly.</p>
+            <div class="ali-meta">
+              <span>
+
+
+
+
+
+<svg class="ali-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+
+
+ 18 May 2026</span>
+              <span class="ali-tag">about</span><span class="ali-tag">data accuracy</span><span class="ali-tag">methodology</span>
+            </div>
+          </div>
+          <span class="ali-arrow">
+
+
+
+
+
+<svg class="ali-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+
+</span>
+        </a>
+      </li>
+      
+      <li class="article-list-item">
         <a href="../articles/load-gpx-files-onto-your-phone/" class="ali-link">
           <div class="ali-main">
             <h2 class="ali-title">How to Load GPX Files Onto Your Phone for Navigation</h2>
@@ -290,9 +322,40 @@
     <footer class="site-footer">
   <p>Walk About Adelaide &mdash; South Australia's Walking Blog &mdash; 2026</p>
   <p>All stats computed from GPS recordings. Always check current trail conditions before heading out.
-     &middot; <a href="../all-walks/?gpx=true">Free GPX Downloads</a></p>
+     &middot; <a href="../all-walks/?gpx=true">Free GPX Downloads</a>
+     &middot; <a href="../privacy/">Privacy Policy</a></p>
 </footer>
 
   </div>
+  <script src="../assets/js/lightbox.js" defer></script>
+  
+<script>
+(function () {
+  'use strict';
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a');
+    if (!link || !link.href) return;
+
+    // Ignore external links
+    if (link.hostname !== window.location.hostname) return;
+
+    // Ignore mailto, tel, and anchor-only links
+    var href = link.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0) return;
+    if (href.indexOf('tel:') === 0) return;
+    if (href.charAt(0) === '#') return;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'internal_link_click', {
+        link_url:   link.href,
+        link_text:  (link.innerText || link.textContent || '').trim().slice(0, 100),
+        page_path:  window.location.pathname
+      });
+    }
+  });
+})();
+</script>
+
+
 </body>
 </html>

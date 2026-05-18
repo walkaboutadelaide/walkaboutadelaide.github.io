@@ -309,8 +309,8 @@
         <div class="about-card-box">
           <div class="qf-label">Site Stats</div>
           <table>
-            <tr><td>Walk Reviews</td><td><strong>9</strong></td></tr>
-            <tr><td>Total Distance</td><td><strong>~99 km</strong></td></tr>
+            <tr><td>Walk Reviews</td><td><strong>15</strong></td></tr>
+            <tr><td>Total Distance</td><td><strong>~145 km</strong></td></tr>
             <tr><td>Coverage Area</td><td><strong>South Australia</strong></td></tr>
             <tr><td>GPX Downloads</td><td><strong>Free, always</strong></td></tr>
             <tr><td>Ads / Trackers</td><td><strong>None</strong></td></tr>
@@ -363,9 +363,40 @@
     <footer class="site-footer">
   <p>Walk About Adelaide &mdash; South Australia's Walking Blog &mdash; 2026</p>
   <p>All stats computed from GPS recordings. Always check current trail conditions before heading out.
-     &middot; <a href="../all-walks/?gpx=true">Free GPX Downloads</a></p>
+     &middot; <a href="../all-walks/?gpx=true">Free GPX Downloads</a>
+     &middot; <a href="../privacy/">Privacy Policy</a></p>
 </footer>
 
   </div>
+  <script src="../assets/js/lightbox.js" defer></script>
+  
+<script>
+(function () {
+  'use strict';
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a');
+    if (!link || !link.href) return;
+
+    // Ignore external links
+    if (link.hostname !== window.location.hostname) return;
+
+    // Ignore mailto, tel, and anchor-only links
+    var href = link.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0) return;
+    if (href.indexOf('tel:') === 0) return;
+    if (href.charAt(0) === '#') return;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'internal_link_click', {
+        link_url:   link.href,
+        link_text:  (link.innerText || link.textContent || '').trim().slice(0, 100),
+        page_path:  window.location.pathname
+      });
+    }
+  });
+})();
+</script>
+
+
 </body>
 </html>
