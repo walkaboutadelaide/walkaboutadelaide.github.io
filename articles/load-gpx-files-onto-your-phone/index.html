@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Load GPX Files Onto Your Phone for Navigation | Walk About Adelaide</title>
+<meta name="description" content="Step-by-step guide to loading GPX files onto your phone for offline trail navigation. Covers Gaia GPS, AllTrails, Komoot, OsmAnd and Organic Maps on both iPhone and Android.">
+<meta name="author" content="Walk About Adelaide">
+<link rel="canonical" href="/articles/load-gpx-files-onto-your-phone/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Load GPX Files Onto Your Phone for Navigation">
+<meta property="og:description" content="Step-by-step guide to loading GPX files onto your phone for offline trail navigation. Covers Gaia GPS, AllTrails, Komoot, OsmAnd and Organic Maps on both iPhone and Android.">
+<meta property="og:url" content="/articles/load-gpx-files-onto-your-phone/">
+<meta property="og:site_name" content="Walk About Adelaide">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Load GPX Files Onto Your Phone for Navigation">
+<meta name="twitter:description" content="Step-by-step guide to loading GPX files onto your phone for offline trail navigation. Covers Gaia GPS, AllTrails, Komoot, OsmAnd and Organic Maps on both iPhone and Android.">
+
+
+
+<meta name="geo.region" content="AU-SA">
+<meta name="geo.placename" content="South Australia">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+
+</head>
+<body>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">
+  
+
+
+
+
+
+<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+
+
+
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="../../">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 30 L13 11 L18 20 L23 13 L32 30 Z" fill="#7ab870" opacity="0.9"/>
+        <circle cx="26" cy="8" r="3.5" fill="#c9952a"/>
+        <path d="M8 30 Q18 25 28 30" stroke="#7ab870" stroke-width="1.5" fill="none" opacity="0.4"/>
+      </svg>
+      <div>
+        Walk About <span style="color:#7ab870">Adelaide</span>
+        <span class="brand-sub">South Australia's Walking Blog</span>
+      </div>
+    </a>
+  </div>
+
+  <nav class="sidebar-nav" aria-label="Main navigation">
+    <span class="nav-section-label">Navigation</span>
+    <ul>
+      <li><a href="../../" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+
+
+ Home
+      </a></li>
+      <li><a href="../../all-walks/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+ All Walks
+      </a></li>
+      <li><a href="../../features/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+
+ Features
+      </a></li>
+      <li><a href="../../articles/" class="active">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+
+
+ Articles
+      </a></li>
+      <li><a href="../../about/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+
+
+ About
+      </a></li>
+      <li><a href="../../contact/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+
+
+ Contact
+      </a></li>
+    </ul>
+
+    <span class="nav-section-label">Trails</span>
+    <ul>
+      <li><a href="../../all-walks/?trail=heysen-trail">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+
+
+ Heysen Trail
+      </a></li>
+      <li><a href="../../all-walks/?trail=coastal">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 17c.6.5 1.2 1 2.5 1C7 18 7 16 9.5 16s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 7c.6.5 1.2 1 2.5 1C7 8 7 6 9.5 6s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg>
+
+
+ Coastal Walks
+      </a></li>
+      <li><a href="../../all-walks/?trail=fleurieu">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 19.34A1 1 0 0 0 4.69 21l2.05-.3A1 1 0 0 0 7 20.5c2.53-3.36 6.64-4.17 13-4.17"/><path d="M17 8l-1-6"/><path d="M17 8l6 1"/></svg>
+
+
+ Fleurieu Peninsula
+      </a></li>
+      <li><a href="../../all-walks/?trail=adelaide-hills">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 20 9 4 15 14 19 10 21 20"/></svg>
+
+
+ Adelaide Hills
+      </a></li>
+    </ul>
+
+    <span class="nav-section-label">Resources</span>
+    <ul>
+      <li><a href="../../all-walks/?gpx=true">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+
+
+ GPX Downloads
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    Walk About Adelaide &mdash; 2026<br>
+    Fleurieu Peninsula, SA
+  </div>
+</aside>
+
+<script>
+(function() {
+  var toggle = document.getElementById('sidebarToggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+  function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+  toggle.addEventListener('click', function() { sidebar.classList.toggle('open'); overlay.classList.toggle('open'); });
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+
+  <div class="with-sidebar">
+    
+
+
+
+<!-- Article Hero -->
+<div class="walk-hero">
+  <div class="walk-hero-inner" style="max-width:1200px;margin:0 auto">
+    <div class="walk-breadcrumb">
+      <a href="../../">Home</a> &rsaquo;
+      <a href="../../articles/">Articles</a> &rsaquo;
+      How to Load GPX Files Onto Your Phone for Navigation
+    </div>
+    <span class="section-label" style="color:#7ab870">Guide</span>
+    <h1>How to Load GPX Files Onto Your Phone for Navigation</h1>
+    <p class="walk-subtitle">A plain-English guide to getting any GPX track onto your phone and following it offline on the trail — no GPS watch required.</p>
+    <div class="walk-hero-meta">
+      
+      <span class="chip">
+        
+
+
+
+
+
+<svg class="chip-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+
+
+
+        12 May 2026
+      </span>
+      
+      <span class="chip">
+        
+
+
+
+
+
+<svg class="chip-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+
+
+
+        5 min read
+      </span>
+      
+      <span class="chip">gpx</span>
+      
+      <span class="chip">navigation</span>
+      
+      <span class="chip">how to</span>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Article body + sidebar -->
+<div class="post-wrapper">
+  <article class="post-content article-body">
+    <p>Every walk review on this site comes with a free GPX file. A GPX file is just a small text file containing the GPS coordinates of a route — the digital equivalent of a line drawn on a map. Load it into a navigation app and your phone shows you exactly where the trail goes and where you are on it, even with no mobile signal.</p>
+
+<p>This guide walks you through the whole process: downloading the file, choosing an app, importing the track, and — the step most people forget — saving offline maps so it actually works in the bush.</p>
+
+<h2 id="what-you-need">What You Need</h2>
+
+<ul>
+  <li>A smartphone (iPhone or Android)</li>
+  <li>A navigation app that supports GPX import (recommendations below)</li>
+  <li>The GPX file for your walk (download links are on every review page)</li>
+  <li>A few minutes at home on Wi-Fi <em>before</em> you leave</li>
+</ul>
+
+<p>The single biggest mistake walkers make is loading the track but forgetting to download the offline map. The track is just a thin line — without a base map cached on your phone, you will be following a squiggle on a blank screen once you lose signal.</p>
+
+<h2 id="step-1--download-the-gpx-file">Step 1 — Download the GPX File</h2>
+
+<p>On any walk review, tap the green <strong>Download GPX</strong> button. On a phone the file usually lands in your <strong>Downloads</strong> folder or opens a “share” sheet.</p>
+
+<ul>
+  <li><strong>iPhone:</strong> the file saves to the Files app, or you get an <em>Open in…</em> prompt — pick your navigation app directly if it appears.</li>
+  <li><strong>Android:</strong> the file goes to <em>Downloads</em>. You can open it from there or import it from inside your app.</li>
+</ul>
+
+<h2 id="step-2--pick-a-navigation-app">Step 2 — Pick a Navigation App</h2>
+
+<p>Any of these will import a GPX file and work fully offline. Pick one and learn it well rather than juggling several.</p>
+
+<h3 id="free-options">Free options</h3>
+
+<ul>
+  <li><strong>Organic Maps</strong> — completely free, no account, open-source. Excellent for following a single track. Lightweight.</li>
+  <li><strong>OsmAnd</strong> — free tier is generous; powerful but a steeper learning curve.</li>
+</ul>
+
+<h3 id="paid--subscription-options">Paid / subscription options</h3>
+
+<ul>
+  <li><strong>Gaia GPS</strong> — the gold standard for serious walkers. Superb topographic layers and offline maps.</li>
+  <li><strong>AllTrails</strong> — easiest for beginners; GPX import and offline maps require the Plus subscription.</li>
+  <li><strong>Komoot</strong> — good route planning; region-based pricing rather than a subscription.</li>
+</ul>
+
+<p>If you have never done this before, start with <strong>Organic Maps</strong> (free) or <strong>AllTrails</strong> (friendliest interface).</p>
+
+<h2 id="step-3--import-the-track">Step 3 — Import the Track</h2>
+
+<p>The exact taps differ per app, but the pattern is always the same:</p>
+
+<ol>
+  <li>Open the GPX file (from Files/Downloads) and choose <em>Open in [your app]</em>, <strong>or</strong></li>
+  <li>Inside the app, look for <strong>Import</strong>, <strong>+</strong>, or a <strong>routes/tracks</strong> menu and select the file.</li>
+</ol>
+
+<p>Once imported, the route appears as a coloured line on the map. Give it a clear name so you can find it on the day.</p>
+
+<h2 id="step-4--download-the-offline-map-do-not-skip-this">Step 4 — Download the Offline Map (Do Not Skip This)</h2>
+
+<p>While you still have Wi-Fi:</p>
+
+<ol>
+  <li>Open the app’s <strong>offline maps</strong> or <strong>downloads</strong> section.</li>
+  <li>Select the region covering your walk — for South Australian walks that is usually the <em>Adelaide / Fleurieu</em> area.</li>
+  <li>Download it. Topographic layers are larger than plain maps, so do this on Wi-Fi, not mobile data.</li>
+</ol>
+
+<p>Then <strong>test it</strong>: turn on flight mode at home and confirm the map tiles and your track still display. Better to find a problem on the couch than at the trailhead.</p>
+
+<h2 id="step-5--on-the-trail">Step 5 — On the Trail</h2>
+
+<ul>
+  <li>Open the app and load your saved track <em>before</em> you start, while you may still have signal.</li>
+  <li>Keep the phone in flight mode or low-power mode to save battery — GPS still works without signal.</li>
+  <li>Your position shows as a dot or arrow. Keep the dot on the line.</li>
+  <li>Carry a battery pack on longer walks; navigation drains batteries faster than you expect.</li>
+</ul>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<p><strong>The track imported but there is no map behind it.</strong> You skipped Step 4 — download the offline region.</p>
+
+<p><strong>My location dot is not showing.</strong> Grant the app location permission (Settings → the app → Location → <em>While Using</em>), and make sure GPS/Location Services is on.</p>
+
+<p><strong>The file will not open.</strong> Confirm it actually downloaded as a <code class="language-plaintext highlighter-rouge">.gpx</code> file and not a renamed web page, then import it from <em>inside</em> the app rather than tapping it in Downloads.</p>
+
+<p><strong>Position is jumpy or inaccurate.</strong> Give the GPS 30–60 seconds outside with a clear view of the sky to settle, especially in valleys or dense forest.</p>
+
+<h2 id="a-note-on-safety">A Note on Safety</h2>
+
+<p>Phone navigation is brilliant, but it is a single point of failure: batteries die, phones break, screens fail in the rain. For anything remote or long, carry a charged power bank and know the basics of where you are headed. A phone is a tool, not a substitute for judgement.</p>
+
+<hr />
+
+<p>Every reviewed walk on this site includes a free GPX file recorded on the actual route — not an estimate. Load it using the steps above and you can follow any of these trails with confidence.</p>
+
+
+    <div class="article-cta">
+      <h3>Ready to hit the trail?</h3>
+      <p>Every walk review on Walk About Adelaide comes with a free, full-resolution GPX file you can load using the steps above.</p>
+      <a href="../../all-walks/?gpx=true" class="btn btn-green btn-sm">
+        
+
+
+
+
+
+<svg class="btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+
+
+ Browse walks with GPX downloads
+      </a>
+    </div>
+  </article>
+
+  <aside class="post-sidebar">
+    
+    
+
+    <div class="sidebar-download">
+      
+
+
+
+
+
+<svg class="dl-svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+      <div style="font-weight:700;color:#1e3d1a;margin-bottom:8px;font-size:0.95rem">Trail Reviews</div>
+      <p style="font-size:0.8rem;color:#555;margin-bottom:12px;line-height:1.6">GPS-verified walk reviews with interactive maps and free GPX downloads.</p>
+      <a href="../../all-walks/" class="btn btn-green btn-sm" style="width:100%;justify-content:center">
+        
+
+
+
+
+
+<svg class="btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+
+ See all walks
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- Back link -->
+<section class="download-section">
+  <div class="inner">
+    <div class="download-box">
+      <a href="../../articles/" class="article-back-link">&larr; Back to all articles</a>
+    </div>
+  </div>
+</section>
+
+    <footer class="site-footer">
+  <p>Walk About Adelaide &mdash; South Australia's Walking Blog &mdash; 2026</p>
+  <p>All stats computed from GPS recordings. Always check current trail conditions before heading out.
+     &middot; <a href="../../all-walks/?gpx=true">Free GPX Downloads</a></p>
+</footer>
+
+  </div>
+</body>
+</html>

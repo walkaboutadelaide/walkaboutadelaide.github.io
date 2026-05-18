@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Walks | Walk About Adelaide</title>
+<meta name="description" content="Browse all walk reviews — South Australia's trails with interactive maps, elevation profiles, GPX downloads and honest reviews.">
+<meta name="author" content="Walk About Adelaide">
+<link rel="canonical" href="/walks/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="All Walks">
+<meta property="og:description" content="Browse all walk reviews — South Australia's trails with interactive maps, elevation profiles, GPX downloads and honest reviews.">
+<meta property="og:url" content="/walks/">
+<meta property="og:site_name" content="Walk About Adelaide">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="All Walks">
+<meta name="twitter:description" content="Browse all walk reviews — South Australia's trails with interactive maps, elevation profiles, GPX downloads and honest reviews.">
+
+
+
+<meta name="geo.region" content="AU-SA">
+<meta name="geo.placename" content="South Australia">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+</head>
+<body>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">
+  
+
+
+
+
+
+<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+
+
+
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="../">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 30 L13 11 L18 20 L23 13 L32 30 Z" fill="#7ab870" opacity="0.9"/>
+        <circle cx="26" cy="8" r="3.5" fill="#c9952a"/>
+        <path d="M8 30 Q18 25 28 30" stroke="#7ab870" stroke-width="1.5" fill="none" opacity="0.4"/>
+      </svg>
+      <div>
+        Walk About <span style="color:#7ab870">Adelaide</span>
+        <span class="brand-sub">South Australia's Walking Blog</span>
+      </div>
+    </a>
+  </div>
+
+  <nav class="sidebar-nav" aria-label="Main navigation">
+    <span class="nav-section-label">Navigation</span>
+    <ul>
+      <li><a href="../" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+
+
+ Home
+      </a></li>
+      <li><a href="../all-walks/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+ All Walks
+      </a></li>
+      <li><a href="../features/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+
+ Features
+      </a></li>
+      <li><a href="../articles/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+
+
+ Articles
+      </a></li>
+      <li><a href="../about/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+
+
+ About
+      </a></li>
+      <li><a href="../contact/" >
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+
+
+ Contact
+      </a></li>
+    </ul>
+
+    <span class="nav-section-label">Trails</span>
+    <ul>
+      <li><a href="../all-walks/?trail=heysen-trail">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+
+
+ Heysen Trail
+      </a></li>
+      <li><a href="../all-walks/?trail=coastal">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 17c.6.5 1.2 1 2.5 1C7 18 7 16 9.5 16s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 7c.6.5 1.2 1 2.5 1C7 8 7 6 9.5 6s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg>
+
+
+ Coastal Walks
+      </a></li>
+      <li><a href="../all-walks/?trail=fleurieu">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 19.34A1 1 0 0 0 4.69 21l2.05-.3A1 1 0 0 0 7 20.5c2.53-3.36 6.64-4.17 13-4.17"/><path d="M17 8l-1-6"/><path d="M17 8l6 1"/></svg>
+
+
+ Fleurieu Peninsula
+      </a></li>
+      <li><a href="../all-walks/?trail=adelaide-hills">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 20 9 4 15 14 19 10 21 20"/></svg>
+
+
+ Adelaide Hills
+      </a></li>
+    </ul>
+
+    <span class="nav-section-label">Resources</span>
+    <ul>
+      <li><a href="../all-walks/?gpx=true">
+        
+
+
+
+
+
+<svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+
+
+ GPX Downloads
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    Walk About Adelaide &mdash; 2026<br>
+    Fleurieu Peninsula, SA
+  </div>
+</aside>
+
+<script>
+(function() {
+  var toggle = document.getElementById('sidebarToggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+  function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+  toggle.addEventListener('click', function() { sidebar.classList.toggle('open'); overlay.classList.toggle('open'); });
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+
+  <div class="with-sidebar">
+    
+<div class="walk-hero" style="padding:40px 40px 32px">
+  <div style="max-width:1200px;margin:0 auto">
+    <h1 style="color:#fff;font-size:2rem;margin-bottom:8px">All Walks</h1>
+    <p style="color:rgba(255,255,255,0.7)">9 walk reviews — with interactive maps, elevation profiles and free GPX downloads.</p>
+  </div>
+</div>
+
+<div class="home-section">
+  <div class="walks-grid">
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Heysen Trail</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-heysen-trail">heysen trail</span>
+          
+          <span class="tag tag-coastal">coastal</span>
+          
+          <span class="tag tag-fleurieu">fleurieu</span>
+          
+        </div>
+        <h3><a href="../walks/tapanappa-to-balquhidder-heysen-trail/" style="color:inherit">Tapanappa to Balquhidder — Heysen Trail South Coast Wilderness Review</a></h3>
+        <p>Full review of the Tapanappa to Balquhidder section of the Heysen Trail — 14.75 km, 599 m ascent, coastal cliffs, Tunkalilla Be...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">14.75 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">599 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Hard</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/tapanappa-to-balquhidder-heysen-trail/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Adelaide Hills</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-adelaide-hills">adelaide hills</span>
+          
+          <span class="tag tag-hard">hard</span>
+          
+          <span class="tag tag-south-australia">south australia</span>
+          
+        </div>
+        <h3><a href="../walks/boundary-loop-happy-valley-reservoir/" style="color:inherit">Happy Valley Reservoir Boundary Loop — Trail Review</a></h3>
+        <p>Full review of the Happy Valley Reservoir Boundary Loop — 10.16 km, 173 m ascent, Grade 4 Challenging. Interactive map, elevati...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">10.16 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">173 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Hard</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/boundary-loop-happy-valley-reservoir/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Adelaide Hills</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-adelaide-hills">adelaide hills</span>
+          
+          <span class="tag tag-easy">easy</span>
+          
+          <span class="tag tag-south-australia">south australia</span>
+          
+        </div>
+        <h3><a href="../walks/southern-loop-happy-valley-reservoir/" style="color:inherit">Happy Valley Reservoir Southern Loop — Trail Review</a></h3>
+        <p>Full review of the Happy Valley Reservoir Southern Loop — 2.39 km, 56 m ascent, Grade 2 Easy. Interactive map, elevation profil...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">2.39 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">56 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Easy</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/southern-loop-happy-valley-reservoir/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Adelaide Hills</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-adelaide-hills">adelaide hills</span>
+          
+          <span class="tag tag-moderate">moderate</span>
+          
+          <span class="tag tag-south-australia">south australia</span>
+          
+        </div>
+        <h3><a href="../walks/woodland-loop-happy-valley-reservoir/" style="color:inherit">Happy Valley Reservoir Woodland Loop — Trail Review</a></h3>
+        <p>Full review of the Happy Valley Reservoir Woodland Loop — 3.87 km, 65 m ascent, Grade 3 Moderate. Interactive map, elevation pr...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">3.87 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">65 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Moderate</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/woodland-loop-happy-valley-reservoir/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Heysen Trail</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-heysen-trail">heysen trail</span>
+          
+          <span class="tag tag-fleurieu">fleurieu</span>
+          
+          <span class="tag tag-moderate">moderate</span>
+          
+        </div>
+        <h3><a href="../walks/inman-valley-to-myponga-heysen-trail/" style="color:inherit">Inman Valley to Myponga — Heysen Trail Fleurieu Highlands Review</a></h3>
+        <p>Full review of the Inman Valley to Myponga section of the Heysen Trail — 19.72 km, 737 m ascent, 4h 56m moving time. Interactiv...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">19.72 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">737 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Moderate</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/inman-valley-to-myponga-heysen-trail/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Heysen Trail</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-heysen-trail">heysen trail</span>
+          
+          <span class="tag tag-coastal">coastal</span>
+          
+          <span class="tag tag-fleurieu">fleurieu</span>
+          
+        </div>
+        <h3><a href="../walks/victor-harbor-to-waitpinga-heysen-trail/" style="color:inherit">Victor Harbor to Waitpinga — Heysen Trail South Coast Review</a></h3>
+        <p>Full review of the Victor Harbor to Waitpinga section of the Heysen Trail — 16.83 km, 440 m ascent, 3h 45m moving time. Interac...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">16.83 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">440 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Moderate</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/victor-harbor-to-waitpinga-heysen-trail/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Coastal Walks</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-coastal">coastal</span>
+          
+          <span class="tag tag-fleurieu">fleurieu</span>
+          
+          <span class="tag tag-moderate">moderate</span>
+          
+        </div>
+        <h3><a href="../walks/hallett-cove-boardwalk/" style="color:inherit">Hallett Cove Boardwalk — Marion Coastal Walking Trail Review</a></h3>
+        <p>Full review of the Hallett Cove Boardwalk on the Marion Coastal Walking Trail — 11.41 km out-and-back, 326 m ascent, Grade 3 Mo...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">11.41 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">327 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Moderate</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/hallett-cove-boardwalk/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Adelaide Hills</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-adelaide-hills">adelaide hills</span>
+          
+          <span class="tag tag-moderate">moderate</span>
+          
+          <span class="tag tag-south-australia">south australia</span>
+          
+        </div>
+        <h3><a href="../walks/happy-valley-shoreline-loop/" style="color:inherit">Happy Valley Reservoir Shoreline Loop — Trail Review</a></h3>
+        <p>Full review of the Happy Valley Reservoir Shoreline Loop — 10.87 km, 205 m ascent, Grade 4 Challenging. Interactive map, elevat...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">10.87 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">205 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Hard</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/happy-valley-shoreline-loop/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+    <article class="walk-card">
+      <div class="walk-card-map" style="background:#e8f4e5;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;color:#4a7c42">
+          
+
+
+
+
+
+<svg class="cs-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7l-3 9 3-2 3 2-3-9"/><path d="M9 13l-3 5"/><path d="M15 13l3 5"/></svg>
+
+
+
+          <div style="font-size:0.8rem;font-weight:600;margin-top:4px">Waterfall Gully Track</div>
+        </div>
+      </div>
+      <div class="walk-card-body">
+        <div class="walk-card-tags">
+          
+          <span class="tag tag-adelaide-hills">adelaide hills</span>
+          
+          <span class="tag tag-cleland-national-park">cleland national park</span>
+          
+          <span class="tag tag-waterfall">waterfall</span>
+          
+        </div>
+        <h3><a href="../walks/waterfall-gully-mt-lofty-summit/" style="color:inherit">Waterfall Gully to Mt Lofty Summit — Adelaide Hills Return Walk Review</a></h3>
+        <p>Full review of the Waterfall Gully to Mt Lofty Summit walk — 8.78 km return, 480 m ascent, 2h moving time. Interactive map, ele...</p>
+        <div class="walk-card-stats">
+          <div class="wcs"><div class="wcs-val">8.78 km</div><div class="wcs-lbl">Distance</div></div>
+          <div class="wcs"><div class="wcs-val">480 m</div><div class="wcs-lbl">Ascent</div></div>
+          <div class="wcs"><div class="wcs-val">Moderate</div><div class="wcs-lbl">Difficulty</div></div>
+        </div>
+        <a href="../walks/waterfall-gully-mt-lofty-summit/" class="walk-card-link">Read full review →</a>
+      </div>
+    </article>
+    
+  </div>
+</div>
+
+    <footer class="site-footer">
+  <p>Walk About Adelaide &mdash; South Australia's Walking Blog &mdash; 2026</p>
+  <p>All stats computed from GPS recordings. Always check current trail conditions before heading out.
+     &middot; <a href="../all-walks/?gpx=true">Free GPX Downloads</a></p>
+</footer>
+
+  </div>
+</body>
+</html>
